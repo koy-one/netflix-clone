@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Netflix Clone</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<header class="fixed w-full flex justify-between items-center px-6 py-4 bg-black/80 backdrop-blur z-50">
+  <h1 class="text-red-600 text-3xl font-bold tracking-wide">NETFLIX</h1>
+
+  <div class="flex gap-2">
+    <input id="searchInput"
+      type="text"
+      placeholder="Rechercher..."
+      class="px-3 py-1 bg-gray-800 rounded outline-none">
+
+    <button id="searchBtn"
+      class="bg-red-600 px-4 py-1 rounded hover:bg-red-700 transition">
+      🔍
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero"
+  class="h-screen flex items-end p-10 bg-cover bg-center relative">
+
+  <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+
+</section>
+
+<!-- LOADER -->
+<div id="loader" class="text-center py-6">Chargement...</div>
+
+<!-- SEARCH -->
+<section class="px-6 py-6">
+  <h2 class="text-xl mb-4">Résultats</h2>
+  <div id="searchResults" class="flex gap-4 overflow-x-auto"></div>
+</section>
+
+<!-- TRENDING -->
+<section class="px-6 py-10">
+  <h2 class="text-xl mb-4">Trending</h2>
+  <div id="trending" class="flex gap-4 overflow-x-auto"></div>
+</section>
+
+<!-- TOP RATED -->
+<section class="px-6 py-10">
+  <h2 class="text-xl mb-4">Top Rated</h2>
+  <div id="topRated" class="flex gap-4 overflow-x-auto"></div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
