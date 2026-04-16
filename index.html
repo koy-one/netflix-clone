@@ -1,65 +1,84 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netflix Clone</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-black text-white">
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <header class="fixed w-full flex justify-between items-center px-6 py-4 bg-black/80 backdrop-blur z-50">
-  <h1 class="text-red-600 text-3xl font-bold tracking-wide">NETFLIX</h1>
+  <h1 class="text-red-600 text-3xl font-bold">NETFLIX</h1>
 
-  <div class="flex gap-2">
-    <input id="searchInput"
-      type="text"
-      placeholder="Rechercher..."
+  <div class="flex gap-2 items-center">
+    <label for="searchInput" class="sr-only">Search</label>
+
+    <input id="searchInput" type="text" placeholder="Search movies..."
       class="px-3 py-1 bg-gray-800 rounded outline-none">
 
-    <button id="searchBtn"
-      class="bg-red-600 px-4 py-1 rounded hover:bg-red-700 transition">
-      🔍
-    </button>
   </div>
 </header>
 
 <!-- HERO -->
 <section id="hero"
-  class="h-screen flex items-end p-10 bg-cover bg-center relative">
+  class="relative h-[85vh] flex items-end px-6 pb-16 bg-cover bg-center">
 
-  <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
 
+  <div class="relative z-10 max-w-2xl">
+
+    <span class="text-sm bg-red-600 px-2 py-1 rounded">Featured</span>
+
+    <h1 id="heroTitle" class="text-5xl font-bold mt-4"></h1>
+
+    <p id="heroDesc" class="text-gray-300 mt-4 max-w-xl"></p>
+
+    <div class="mt-6 flex gap-4">
+      <button id="playBtn"
+        class="bg-white text-black px-6 py-2 rounded font-semibold">
+        ▶ Play Trailer
+      </button>
+    </div>
+
+  </div>
 </section>
 
-<!-- LOADER -->
-<div id="loader" class="text-center py-6">Chargement...</div>
-
-<!-- SEARCH -->
-<section class="px-6 py-6">
-  <h2 class="text-xl mb-4">Résultats</h2>
-  <div id="searchResults" class="flex gap-4 overflow-x-auto"></div>
-</section>
-
-<!-- TRENDING -->
+<!-- SECTIONS -->
 <section class="px-6 py-10">
   <h2 class="text-xl mb-4">Trending</h2>
   <div id="trending" class="flex gap-4 overflow-x-auto"></div>
 </section>
 
-<!-- TOP RATED -->
 <section class="px-6 py-10">
   <h2 class="text-xl mb-4">Top Rated</h2>
   <div id="topRated" class="flex gap-4 overflow-x-auto"></div>
 </section>
 
-<script src="script.js"></script>
+<section class="px-6 py-10">
+  <h2 class="text-xl mb-4">Search Results</h2>
+  <div id="searchResults" class="flex gap-4 overflow-x-auto"></div>
+</section>
 
+<!-- MODAL -->
+<div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+  <div class="relative w-11/12 md:w-2/3">
+
+    <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl">✖</button>
+
+    <iframe id="modalVideo"
+      class="w-full h-[400px]"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
