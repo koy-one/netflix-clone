@@ -1,7 +1,10 @@
-## Demo
+# Netflix Clone
 
-The project is not yet deployed online.
-A live version will be added soon using Vercel or Netlify.
+A modern Netflix-inspired web application built with JavaScript and TMDB API.
+
+## Live Demo
+
+(https://netflix-clone-five-lyart-84.vercel.app/)
 
 ## Screenshots
 
@@ -11,16 +14,32 @@ A live version will be added soon using Vercel or Netlify.
 ### Hero Section
 ![Hero](./assets/hero.png)
 
+## Tech Stack
+
+- HTML
+- Tailwind CSS
+- JavaScript
+- TMDB API
+
+## Features
+
+- Dynamic movie data from API
+- Trending and top-rated movies
+- Search functionality
+- Interactive UI
+- Modal video trailer playback
+- Responsive design
+
 ## Future Improvements
 
-- Add user authentication system
-- Improve movie recommendation system
-- Add favorites list (localStorage)
+- Add favorites system (localStorage)
+- Improve UI/UX animations
+- Add authentication system
 - Deploy live version
 
-## Note
+## Disclaimer
 
-This project is for learning purposes and is not affiliated with Netflix or TMDB.
+This project is for educational purposes only and is not affiliated with Netflix or The Movie Database (TMDB).
 
 ## Author
 
